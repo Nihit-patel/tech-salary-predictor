@@ -84,12 +84,12 @@ Created an easy-to-use web page to allow users to predict their salary (In USD) 
 - Add additional interesting metrics besides the annual salary (cost of living, quality of life)
 
 ## Setup
-# To run locally:
+### To run locally:
 - Install dependencies: `pip install -r backend/requirements.txt`
 - Run the backend server `app.py` using `python backend/app.py`
 - Run the front end server.
 
-# Deployed Version
+### Deployed Version
 Available at [tech-salary-predictor.vercel.app](https://tech-salary-predictor.vercel.app/)
 - Frontend is deployed using Vercel.
 - Backend is deployed using Render.
