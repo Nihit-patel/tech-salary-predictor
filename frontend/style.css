@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  background: #f8f9fa;
+  min-height: 100vh;
+  padding: 40px 20px;
+  line-height: 1.6;
+  color: #2c3e50;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+header {
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  color: white;
+  padding: 60px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="2" fill="white" opacity="0.1"/></svg>');
+  opacity: 0.3;
+}
+
+header h1 {
+  font-size: 2.75rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.subtitle {
+  font-size: 1.125rem;
+  opacity: 0.95;
+  font-weight: 400;
+  position: relative;
+}
+
+#salaryForm {
+  padding: 48px 40px;
+}
+
+.form-section {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+}
+
+.form-section h2 {
+  color: #1e293b;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 10px;
+  font-size: 0.9375rem;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background: #ffffff;
+  font-family: inherit;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.9375rem;
+  background: #ffffff;
+  font-weight: 400;
+}
+
+.checkbox-label:hover {
+  border-color: #2563eb;
+  background: #f0f6ff;
+}
+
+.checkbox-label input[type="checkbox"],
+.checkbox-label input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  cursor: pointer;
+  accent-color: #2563eb;
+}
+
+.checkbox-label:has(input:checked) {
+  background: #eff6ff;
+  border-color: #2563eb;
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.predict-btn {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 32px;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+  letter-spacing: 0.3px;
+}
+
+.predict-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.4);
+}
+
+.predict-btn:active {
+  transform: translateY(0);
+}
+
+.result-container {
+  padding: 40px;
+  text-align: center;
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.result-container.calculating {
+  color: #6366f1;
+  font-size: 1.125rem;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.result-container.success {
+  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  border-top: 1px solid #bfdbfe;
+}
+
+.result-label {
+  font-size: 1rem;
+  color: #64748b;
+  margin-bottom: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.result-value {
+  font-size: 3rem;
+  color: #2563eb;
+  font-weight: 700;
+  letter-spacing: -1px;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 16px;
+  }
+
+  header {
+    padding: 40px 24px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  #salaryForm {
+    padding: 32px 24px;
+  }
+
+  .checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .result-value {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  .form-section h2 {
+    font-size: 1.25rem;
+  }
+}

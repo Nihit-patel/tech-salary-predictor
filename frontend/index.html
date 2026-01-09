@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developer Salary Predictor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Developer Salary Predictor</h1>
+            <p class="subtitle">Get data-driven insights into your earning potential</p>
+        </header>
+
+        <form id="salaryForm">
+            <section class="form-section">
+                <h2>Basic Information</h2>
+
+                <div class="form-group">
+                    <label for="yearsCodePro">Years of Professional Coding Experience</label>
+                    <input type="number" id="yearsCodePro" min="0" max="50" value="5" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="edLevel">Education Level</label>
+                    <select id="edLevel" required>
+                        <option value="0">Secondary school</option>
+                        <option value="1">Some college/university</option>
+                        <option value="2">Associate degree</option>
+                        <option value="3" selected>Bachelor's degree</option>
+                        <option value="4">Master's degree</option>
+                        <option value="5">Professional degree (PhD, MD, JD)</option>
+                        <option value="3">Something else</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" required>
+                        <option value="Country_United States of America" selected>United States</option>
+                        <option value="Country_United Kingdom of Great Britain and Northern Ireland">United Kingdom
+                        </option>
+                        <option value="Country_Germany">Germany</option>
+                        <option value="Country_Canada">Canada</option>
+                        <option value="Country_India">India</option>
+                        <option value="Country_Australia">Australia</option>
+                        <option value="Country_Netherlands">Netherlands</option>
+                        <option value="Country_Sweden">Sweden</option>
+                        <option value="Country_Switzerland">Switzerland</option>
+                        <option value="Country_France">France</option>
+                        <option value="Country_Norway">Norway</option>
+                        <option value="Country_Denmark">Denmark</option>
+                        <option value="Country_Israel">Israel</option>
+                        <option value="Country_Austria">Austria</option>
+                        <option value="Country_Belgium">Belgium</option>
+                        <option value="Country_Finland">Finland</option>
+                        <option value="Country_Spain">Spain</option>
+                        <option value="Country_Italy">Italy</option>
+                        <option value="Country_Poland">Poland</option>
+                        <option value="Country_Portugal">Portugal</option>
+                        <option value="Country_Brazil">Brazil</option>
+                        <option value="Country_New Zealand">New Zealand</option>
+                        <option value="Country_South Africa">South Africa</option>
+                        <option value="Country_Romania">Romania</option>
+                        <option value="Country_Turkey">Turkey</option>
+                        <option value="Country_Ukraine">Ukraine</option>
+                        <option value="Country_Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="orgSize">Organization Size</label>
+                    <select id="orgSize" required>
+                        <option value="0">2 to 9 employees</option>
+                        <option value="1">10 to 19 employees</option>
+                        <option value="2">20 to 99 employees</option>
+                        <option value="3" selected>100 to 499 employees</option>
+                        <option value="4">500 to 999 employees</option>
+                        <option value="5">1,000 to 4,999 employees</option>
+                        <option value="6">5,000 to 9,999 employees</option>
+                        <option value="7">10,000 or more employees</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="remoteWork">Work Arrangement</label>
+                    <select id="remoteWork" required>
+                        <option value="Remote">Remote</option>
+                        <option value="Hybrid" selected>Hybrid (some remote, some in-person)</option>
+                        <option value="In-person">In-person</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Developer Type</h2>
+                <div class="checkbox-grid">
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType" value="DevType_Developer, full-stack" checked>
+                        Full-stack Developer
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType" value="DevType_Developer, back-end">
+                        Back-end Developer
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType" value="DevType_Developer, front-end">
+                        Front-end Developer
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType" value="DevType_DevOps specialist">
+                        DevOps Specialist
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType" value="DevType_Developer, mobile">
+                        Mobile Developer
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType"
+                            value="DevType_Data scientist or machine learning specialist">
+                        Data Scientist / ML
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType" value="DevType_Engineer, data">
+                        Data Engineer
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType" value="DevType_Engineer, site reliability">
+                        Site Reliability Engineer
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType"
+                            value="DevType_Developer, desktop or enterprise applications">
+                        Desktop/Enterprise Dev
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType" value="DevType_Developer, embedded applications or devices">
+                        Embedded Developer
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType" value="DevType_Engineering manager">
+                        Engineering Manager
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType" value="DevType_Senior Executive (C-Suite, VP, etc.)">
+                        Senior Executive
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType" value="DevType_Research & Development role">
+                        Research & Development
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="radio" name="devType" value="DevType_Other">
+                        Other
+                    </label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Programming Languages</h2>
+                <div class="checkbox-grid">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_JavaScript" checked>
+                        JavaScript
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_Python" checked>
+                        Python
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_TypeScript">
+                        TypeScript
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_SQL">
+                        SQL
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_HTML_CSS">
+                        HTML/CSS
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_Java">
+                        Java
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_CSharp">
+                        C#
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_CPP">
+                        C++
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_C">
+                        C
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_Go">
+                        Go
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_Rust">
+                        Rust
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_PHP">
+                        PHP
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_Bash_Shell">
+                        Bash/Shell
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="language" value="Has_PowerShell">
+                        PowerShell
+                    </label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Databases</h2>
+                <div class="checkbox-grid">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_PostgreSQL">
+                        PostgreSQL
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_MySQL">
+                        MySQL
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_MongoDB">
+                        MongoDB
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_SQLServer">
+                        SQL Server
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_SQLite">
+                        SQLite
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_Redis">
+                        Redis
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_Elasticsearch">
+                        Elasticsearch
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_MariaDB">
+                        MariaDB
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_Oracle">
+                        Oracle
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_DynamoDB">
+                        DynamoDB
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_CosmosDB">
+                        Cosmos DB
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_CloudFirestore">
+                        Cloud Firestore
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_BigQuery">
+                        BigQuery
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_FirebaseRealtimeDatabase">
+                        Firebase Realtime DB
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="database" value="Has_H2">
+                        H2
+                    </label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Cloud Platforms</h2>
+                <div class="checkbox-grid">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="cloud" value="Has_AWS">
+                        AWS
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="cloud" value="Has_Azure">
+                        Azure
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="cloud" value="Has_GCP">
+                        Google Cloud Platform
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="cloud" value="Has_Firebase">
+                        Firebase
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="cloud" value="Has_Cloudflare">
+                        Cloudflare
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="cloud" value="Has_DigitalOcean">
+                        DigitalOcean
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="cloud" value="Has_Heroku">
+                        Heroku
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="cloud" value="Has_Vercel">
+                        Vercel
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="cloud" value="Has_Netlify">
+                        Netlify
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="cloud" value="Has_VMware">
+                        VMware
+                    </label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Frameworks & Libraries</h2>
+                <div class="checkbox-grid">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_React" checked>
+                        React
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_NodeJS">
+                        Node.js
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_Angular">
+                        Angular
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_Vue">
+                        Vue.js
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_NextJS">
+                        Next.js
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_Express">
+                        Express
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_Django">
+                        Django
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_Flask">
+                        Flask
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_FastAPI">
+                        FastAPI
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_SpringBoot">
+                        Spring Boot
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_ASPNETCore">
+                        ASP.NET Core
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_ASPNET">
+                        ASP.NET
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_jQuery">
+                        jQuery
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_Laravel">
+                        Laravel
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_WordPress">
+                        WordPress
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_Svelte">
+                        Svelte
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_NestJS">
+                        NestJS
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_RubyOnRails">
+                        Ruby on Rails
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_AngularJS">
+                        AngularJS
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="framework" value="Has_Blazor">
+                        Blazor
+                    </label>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <h2>Tools & DevOps</h2>
+                <div class="checkbox-grid">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_Docker">
+                        Docker
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_Kubernetes">
+                        Kubernetes
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_npm">
+                        npm
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_Terraform">
+                        Terraform
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_Webpack">
+                        Webpack
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_Yarn">
+                        Yarn
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_Pip">
+                        Pip
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_Maven">
+                        Maven
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_Gradle">
+                        Gradle
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_NuGet">
+                        NuGet
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_Homebrew">
+                        Homebrew
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_Vite">
+                        Vite
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_Visual_Studio_Solution">
+                        Visual Studio
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_Make">
+                        Make
+                    </label>
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="tool" value="Has_MSBuild">
+                        MSBuild
+                    </label>
+                </div>
+            </section>
+
+            <button type="submit" class="predict-btn">Calculate Salary Prediction</button>
+        </form>
+
+        <div id="result" class="result-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
