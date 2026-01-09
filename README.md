@@ -89,7 +89,7 @@ Created an easy-to-use web page to allow users to predict their salary (In USD) 
 - Run the backend server `app.py` using `python backend/app.py`
 - Run the front end server.
 
-### Deployed Version
+### Deployed Version:
 Available at [tech-salary-predictor.vercel.app](https://tech-salary-predictor.vercel.app/)
 - Frontend is deployed using Vercel.
 - Backend is deployed using Render.
