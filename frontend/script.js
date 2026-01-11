@@ -123,3 +123,11 @@ document.getElementById("salaryForm").addEventListener("submit", function () {
       .scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, 100);
 });
+
+// run once to start up the Render backend and give default prediction
+document.addEventListener("DOMContentLoaded", async () => {
+  if (document.getElementById("salaryForm")) {
+    await predictSalary();
+  }
+});
+
