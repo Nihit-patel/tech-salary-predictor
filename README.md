@@ -90,6 +90,8 @@ Created an easy-to-use web page to allow users to predict their salary (In USD) 
 - Run the front end server.
 
 ### Deployed Version:
+***NOTE: Once the website is loaded, please wait up to 1 minute for the backend Render server to start.***
+
 Available at [tech-salary-predictor.vercel.app](https://tech-salary-predictor.vercel.app/)
 - Frontend is deployed using Vercel.
 - Backend is deployed using Render.
